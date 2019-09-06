@@ -111,12 +111,12 @@
                                         Privado
                                         </label>
                                     </div>
-                                    <div class="radio">
+                                    {{-- <div class="radio">
                                         <label>
                                         <input type="radio" name="medio_transporte" id="medio_transporte3" value="TELEFERICO">
                                         Teleférico
                                         </label>
-                                    </div>
+                                    </div> --}}
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -165,7 +165,7 @@
                                 <div class="form-group">
                                     <select class="form-control" name="plato_preferido" id="" required>
                                         <option value="" selected>--- SELECCIONE SU PLATO PREFERIDO ---</option>
-                                    @foreach ($platos_la_paz as $platos)
+                                    @foreach ($platos_beni as $platos)
                                         <option value="{{$platos->plato}}">{{$platos->id}} - {{$platos->plato}}</option>
                                     @endforeach
                                     </select>
