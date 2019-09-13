@@ -49,7 +49,7 @@
 					@foreach ($grado_satisfaccion as $g)
 					<th> {{$g->grado}} </th>
 					@endforeach
-					@foreach ($platos_beni as $platos)
+					@foreach ($platos_cochabamba as $platos)
 					{{-- <th> {{$platos->plato}} </th> --}}
 					<th> {{$platos->id}} </th>
 					@endforeach
@@ -93,7 +93,7 @@
 			<td>0</td>
 			@endif
 			@endforeach
-			@foreach ($platos_beni as $platos)
+			@foreach ($platos_cochabamba as $platos)
 			@if ($v->plato_preferido == $platos->plato)
 			<td>1</td>
 			@else

@@ -36,7 +36,7 @@
 				</tr>
 				<tr>    
 					<th>No.</th>
-					@foreach ($platos_beni as $platos)
+					@foreach ($platos_cochabamba as $platos)
 					<th> {{$platos->id}} </th>
 					@endforeach
 					<th>Platos Preparados</th>
@@ -50,7 +50,7 @@
 	    @foreach($visitantes as $v)
 		<tr role="row" class="odd">
 			<td>{{$v->id}}</td>
-			@foreach ($platos_beni as $platos)
+			@foreach ($platos_cochabamba as $platos)
 			@if ($v->plato == $platos->plato)
 			<td>1</td>
 			@else

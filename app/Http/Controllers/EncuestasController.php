@@ -10,7 +10,7 @@ use Caffeinated\Shinobi\Models\Role;
 use Caffeinated\Shinobi\Models\Permission;
 
 use App\User;
-use App\Platos_Beni;
+use App\Platos_Cochabamba;
 use App\Gastronomia;
 use App\Visitante;
 use App\Conteo;
@@ -199,9 +199,9 @@ class EncuestasController extends Controller
         if(\Auth::user()->isRole('encuestador')==false){
             return view("mensajes.mensaje_error")->with("msj",'<div class="box box-danger col-xs-12"><div class="rechazado" style="margin-top:70px; text-align: center">    <span class="label label-success">Alto !<i class="fa fa-check"></i></span><br/>  <label style="color:#177F6B">  Sistema de encuestas cerrado </label>   </div></div> ') ;
         }
-        $platos_beni = Platos_Beni::all();
+        $platos_cochabamba = Platos_Cochabamba::all();
         return view("formularios.form_encuesta_gastronomia")
-        ->with('platos_beni', $platos_beni);
+        ->with('platos_cochabamba', $platos_cochabamba);
     }
 
     public function enviar_gastronomia(Request $request){
@@ -359,9 +359,9 @@ class EncuestasController extends Controller
         if(\Auth::user()->isRole('encuestador')==false){
             return view("mensajes.mensaje_error")->with("msj",'<div class="box box-danger col-xs-12"><div class="rechazado" style="margin-top:70px; text-align: center">    <span class="label label-success">Alto !<i class="fa fa-check"></i></span><br/>  <label style="color:#177F6B">  Sistema de encuestas cerrado </label>   </div></div> ') ;
         }
-        $platos_beni = Platos_Beni::all();
+        $platos_cochabamba = Platos_Cochabamba::all();
         return view("formularios.form_encuesta_visitante")
-        ->with('platos_beni', $platos_beni);
+        ->with('platos_cochabamba', $platos_cochabamba);
     }
 
     public function reporte_final(){    
@@ -480,7 +480,7 @@ class EncuestasController extends Controller
     public function reporte_encuesta(){
         $sexos = Sexo::all();
         $visitantes = Visitante::all();
-        $platos_beni = Platos_Beni::all();
+        $platos_cochabamba = Platos_Cochabamba::all();
         $medios_comunicacion = Medios_Comunicacion::all();
         $medios_transporte = Medios_Transporte::all();
         $grado_satisfaccion = Grado_Satisfaccion::all();
@@ -488,7 +488,7 @@ class EncuestasController extends Controller
         ->with('grado_satisfaccion', $grado_satisfaccion)
         ->with('medios_transporte', $medios_transporte)
         ->with('medios_comunicacion', $medios_comunicacion)
-        ->with('platos_beni', $platos_beni)
+        ->with('platos_cochabamba', $platos_cochabamba)
         ->with('sexos', $sexos)
         ->with('visitantes', $visitantes);
     }
@@ -496,7 +496,7 @@ class EncuestasController extends Controller
     public function reporte_encuesta_gastronomia(){
         $sexos = Sexo::all();
         $visitantes = Gastronomia::all();
-        $platos_beni = Platos_Beni::all();
+        $platos_cochabamba = Platos_Cochabamba::all();
         $medios_comunicacion = Medios_Comunicacion::all();
         $medios_transporte = Medios_Transporte::all();
         $grado_satisfaccion = Grado_Satisfaccion::all();
@@ -504,7 +504,7 @@ class EncuestasController extends Controller
         ->with('grado_satisfaccion', $grado_satisfaccion)
         ->with('medios_transporte', $medios_transporte)
         ->with('medios_comunicacion', $medios_comunicacion)
-        ->with('platos_beni', $platos_beni)
+        ->with('platos_cochabamba', $platos_cochabamba)
         ->with('sexos', $sexos)
         ->with('visitantes', $visitantes);
     }
