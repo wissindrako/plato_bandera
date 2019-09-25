@@ -165,7 +165,7 @@
                                 <div class="form-group">
                                     <select class="form-control" name="plato_preferido" id="" required>
                                         <option value="" selected>--- SELECCIONE SU PLATO PREFERIDO ---</option>
-                                    @foreach ($platos_beni as $platos)
+                                    @foreach ($platos_oruro as $platos)
                                         <option value="{{$platos->plato}}">{{$platos->id}} - {{$platos->plato}}</option>
                                     @endforeach
                                     </select>
