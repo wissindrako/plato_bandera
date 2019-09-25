@@ -75,6 +75,7 @@
                                     <select class="form-control" name="plato_preparado" id="" required>
                                         <option value="" selected> --- SELECCIONE EL PLATO MAS VENDIDO ---</option>
                                         @foreach ($platos_oruro as $platos)
+
                                             <option value="{{$platos->plato}}">{{$platos->id}} - {{$platos->plato}}</option>
                                         @endforeach
                                     </select>

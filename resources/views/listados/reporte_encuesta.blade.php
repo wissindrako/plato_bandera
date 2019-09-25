@@ -50,6 +50,7 @@
 					<th> {{$g->grado}} </th>
 					@endforeach
 					@foreach ($platos_oruro as $platos)
+
 					{{-- <th> {{$platos->plato}} </th> --}}
 					<th> {{$platos->id}} </th>
 					@endforeach
@@ -94,6 +95,7 @@
 			@endif
 			@endforeach
 			@foreach ($platos_oruro as $platos)
+
 			@if ($v->plato_preferido == $platos->plato)
 			<td>1</td>
 			@else

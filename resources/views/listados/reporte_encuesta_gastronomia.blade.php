@@ -37,6 +37,7 @@
 				<tr>    
 					<th>No.</th>
 					@foreach ($platos_oruro as $platos)
+
 					<th> {{$platos->id}} </th>
 					@endforeach
 					<th>Platos Preparados</th>
@@ -51,6 +52,7 @@
 		<tr role="row" class="odd">
 			<td>{{$v->id}}</td>
 			@foreach ($platos_oruro as $platos)
+
 			@if ($v->plato == $platos->plato)
 			<td>1</td>
 			@else
